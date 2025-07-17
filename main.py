@@ -43,8 +43,8 @@ CONFIG = {
     # 用于让关注度更高的新闻在更前面显示，这里是权重排序配置，合起来是 1 就行
     "WEIGHT_CONFIG": {
         "RANK_WEIGHT": 0.6,  # 排名
-        "FREQUENCY_WEIGHT": 0.3,  # 频次
-        "HOTNESS_WEIGHT": 0.1,  # 热度
+        "FREQUENCY_WEIGHT": 0.2,  # 频次
+        "HOTNESS_WEIGHT": 0.2,  # 热度
     },
 }
 
@@ -2592,10 +2592,8 @@ class NewsAnalyzer:
             ("bilibili-hot-search", "bilibili 热搜"),
             ("cls-hot", "财联社热门"),
             ("ifeng", "凤凰网"),
-            "tieba",
             "weibo",
-            "douyin",
-            "zhihu",
+            "douyin"
         ]
 
         print(f"开始爬取数据，请求间隔 {self.request_interval} 毫秒")
